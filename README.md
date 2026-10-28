@@ -3,7 +3,7 @@
 
 **Materia:** Programación sobre Redes  
 **Carrera:** Tecnicatura Superior en Desarrollo de Software (IFTS N° 29)  
-**Profesor:** Alan Portillo / Germán Ríos  
+**Profesor:** Alan Portillo
 **Alumno:** Guillermo Sciulli  
 **Repositorio Oficial:** [https://github.com/guillote1977/ProgSRedes-PFO3](https://github.com/guillote1977/ProgSRedes-PFO3)  
 **Documento de Presentación:** [PFO3_Presentacion_Sistema_Distribuido.pdf](PFO3_Presentacion_Sistema_Distribuido.pdf)
