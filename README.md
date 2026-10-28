@@ -6,7 +6,7 @@
 **Profesor:** Alan Portillo / Germán Ríos  
 **Alumno:** Guillermo Sciulli  
 **Repositorio Oficial:** [https://github.com/guillote1977/ProgSRedes-PFO3](https://github.com/guillote1977/ProgSRedes-PFO3)  
-**Documento de Presentación:** [PRESENTACION_ENTREGA.md](PRESENTACION_ENTREGA.md) | [PFO3_Presentacion_Sistema_Distribuido.pdf](PFO3_Presentacion_Sistema_Distribuido.pdf)
+**Documento de Presentación:** [PFO3_Presentacion_Sistema_Distribuido.pdf](PFO3_Presentacion_Sistema_Distribuido.pdf)
 
 ---
 
@@ -26,9 +26,8 @@ Para ello, la solución abarca dos pilares esenciales:
 
 El siguiente diagrama esquemático ilustra la arquitectura distribuida de 5 capas diseñada para cumplir con las consignas de la PFO 3:
 
-![Diagrama de Arquitectura del Sistema Distribuido](diagrama_arquitectura.png)
+![Diagrama de Arquitectura del Sistema Distribuido](diagrama_arquitectura.jpg)
 
-> 💡 **Formato vectorial:** También se encuentra disponible la versión vectorial escalable en [diagrama_arquitectura.svg](diagrama_arquitectura.svg).
 
 ### 🧩 Explicación de los Componentes:
 
