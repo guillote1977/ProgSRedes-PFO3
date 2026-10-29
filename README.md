@@ -102,6 +102,7 @@ Selecciona una opción (1-5):
 
 2. **Seleccionar Opción 3 (Consultar Estado)**:
    - Ingresa el ID recibido (ej. `TASK-1793016371167-40AF51`).
+   (También se le ha agregado la opción de elegir por número de tarea, para no escribir el ID completo.)
    - **Respuesta:**
      ```json
      {
@@ -113,6 +114,7 @@ Selecciona una opción (1-5):
          "timestamp": "2026-10-26 12:06:12"
        }
      }
+     
      ```
 
 3. **Seleccionar Opción 4 (Prueba de Carga de 3 Tareas Simultáneas)**:
