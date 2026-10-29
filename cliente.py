@@ -87,6 +87,7 @@ def main():
 
             elif opcion == '4':
                 print("\n[CLIENTE] Enviando 3 tareas simultáneas a la cola de workers...")
+                tareas_rafaga = []
                 for i in range(1, 4):
                     peticion = {
                         'comando': 'ENVIAR_TAREA',
@@ -94,18 +95,21 @@ def main():
                         'payload': {'numero': i * 10}
                     }
                     res = enviar_peticion(sock, peticion)
-                    print(f" -> Tarea {i} enviada: Task ID {res.get('task_id')}")
-                    if res.get('task_id'):
-                        tareas_registradas.append(res['task_id'])
+                    tid = res.get('task_id')
+                    print(f" -> Tarea {i} enviada: Cuadrado de {i*10}, Task ID {tid}")
+                    if tid:
+                        tareas_registradas.append(tid)
+                        tareas_rafaga.append(tid)
                 
                 print("\nEsperando 2 segundos para que los workers completen el procesamiento...")
                 time.sleep(2)
 
                 print("\nConsultando estado de las 3 tareas:")
-                for tid in tareas_registradas[-3:]:
+                for tid in tareas_rafaga:
                     peticion = {'comando': 'CONSULTAR_TAREA', 'task_id': tid}
                     res = enviar_peticion(sock, peticion)
-                    print(f" -> {tid}: {res['info']['estado']} | Resultado: {res['info']['resultado']}")
+                    info = res.get('info', {})
+                    print(f" -> {tid}: {info.get('estado', 'N/A')} | Resultado: {info.get('resultado', 'N/A')}")
 
             elif opcion == '5':
                 peticion = {'comando': 'SALIR'}

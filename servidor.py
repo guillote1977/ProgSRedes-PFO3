@@ -2,6 +2,7 @@ import socket
 import json
 import threading
 import time
+import uuid
 from concurrent.futures import ThreadPoolExecutor
 
 # Configuración del Servidor y Pool de Workers
@@ -62,7 +63,7 @@ def handle_client(conn, addr, executor):
                 comando = mensaje.get('comando')
 
                 if comando == 'ENVIAR_TAREA':
-                    task_id = f"TASK-{int(time.time() * 1000)}"
+                    task_id = f"TASK-{int(time.time() * 1000)}-{uuid.uuid4().hex[:6].upper()}"
                     task_type = mensaje.get('tipo', 'generica')
                     payload = mensaje.get('payload', {})
 

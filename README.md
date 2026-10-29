@@ -44,7 +44,7 @@ El siguiente diagrama esquemático ilustra la arquitectura distribuida de 5 capa
 ## 🚀 3. Guía de Ejecución y Pruebas del Código Python
 
 ### Prerrequisitos
-El código utiliza únicamente librerías estándar de Python 3 (`socket`, `json`, `threading`, `concurrent.futures`), por lo que no requiere instalar paquetes adicionales.
+El código utiliza únicamente librerías estándar de Python 3 (`socket`, `json`, `threading`, `concurrent.futures`, `uuid`), por lo que no requiere instalar paquetes adicionales.
 
 ```bash
 python3 --version
@@ -98,15 +98,15 @@ Selecciona una opción (1-5):
 1. **Seleccionar Opción 1**:
    - Ingresa el número `12`.
    - El cliente envía la tarea vía JSON.
-   - **Respuesta:** `{"status": "OK", "mensaje": "Tarea recibida y asignada a un worker", "task_id": "TASK-1793016371167"}`.
+   - **Respuesta:** `{"status": "OK", "mensaje": "Tarea recibida y asignada a un worker", "task_id": "TASK-1793016371167-40AF51"}`.
 
 2. **Seleccionar Opción 3 (Consultar Estado)**:
-   - Ingresa el ID recibido (ej. `TASK-1793016371167`).
+   - Ingresa el ID recibido (ej. `TASK-1793016371167-40AF51`).
    - **Respuesta:**
      ```json
      {
        "status": "OK",
-       "task_id": "TASK-1793016371167",
+       "task_id": "TASK-1793016371167-40AF51",
        "info": {
          "estado": "COMPLETADA",
          "resultado": 144,
